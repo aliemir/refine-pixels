@@ -14,6 +14,7 @@ export const CanvasList = () => {
   const { data } = useList<Canvas>({
     resource: "canvases",
     config: {
+      hasPagination: false,
       sort: [
         {
           field: "created_at",
