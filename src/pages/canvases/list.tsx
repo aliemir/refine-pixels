@@ -45,17 +45,35 @@ export const CanvasList = () => {
             <CreateButton>Create a Canvas</CreateButton>
           </Col>
         </Row>
-        <Row gutter={[16, 16]}>
+        <Row
+          gutter={[16, 16]}
+          align="middle"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(248px, 1fr))",
+            alignItems: "center",
+            justifyItems: "center",
+          }}
+        >
           {data?.data?.map((canvas) => (
-            <Col key={canvas.id}>
+            <Col
+              key={canvas.id}
+              style={{
+                height: "100%",
+                width: "100%",
+                maxWidth: "248px",
+              }}
+            >
               <Button
                 onClick={() => {
                   show("canvases", canvas.id);
                 }}
                 style={{
+                  height: "100%",
                   maxHeight: "unset",
-                  height: "auto",
                   paddingTop: "15px",
+                  display: "flex",
+                  alignItems: "start",
                 }}
               >
                 <CanvasItem
