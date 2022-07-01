@@ -101,14 +101,6 @@ export const Sider: React.FC = () => {
         )}
 
         {renderTreeView(menuItems, selectedKey)}
-
-        <Menu.Item
-          key="logout"
-          onClick={() => logout()}
-          icon={<LogoutOutlined />}
-        >
-          Logout
-        </Menu.Item>
       </Menu>
     </AntdLayout.Sider>
   );
