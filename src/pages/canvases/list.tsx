@@ -13,6 +13,14 @@ import { Canvas } from "types/canvas";
 export const CanvasList = () => {
   const { data } = useList<Canvas>({
     resource: "canvases",
+    config: {
+      sort: [
+        {
+          field: "created_at",
+          order: "desc",
+        },
+      ],
+    },
     metaData: {},
   });
 
