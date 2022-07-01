@@ -1,6 +1,5 @@
 # refine-pixels
 
-
 This project was generated with [superplate](https://github.com/pankod/superplate).
 
 ## Getting Started
@@ -26,117 +25,6 @@ superplate is a Next.js all-in-one project generator. Create your project with t
 ```bash
     npm run start
 ```
-
-## Learn More
-
-To learn more about **superplate**, please check out the [Documentation](https://github.com/pankod/superplate).
-
-
-### **antd**
-
-
-
-[Go To Documentation]()
-
-
-### **antd-css**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **react-router-v6**
-
-
-
-[Go To Documentation]()
-
-
-### **data-provider-supabase**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **antd-custom-layout**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
-### **no**
-
-
-
-[Go To Documentation]()
-
-
 
 ## License
 
