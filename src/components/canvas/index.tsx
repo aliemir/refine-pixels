@@ -71,6 +71,7 @@ export const CanvasItem: React.FC<{
       </div>
       <div
         style={{
+          whiteSpace: "normal",
           display: active ? "none" : "block",
           padding: "12px",
           textAlign: "center",
