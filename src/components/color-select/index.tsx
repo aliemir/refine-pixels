@@ -1,23 +1,5 @@
 import React from "react";
-
-export const colors = [
-  "black",
-  "white",
-  "dimgray",
-  "sienna",
-  "tan",
-  "navy",
-  "cornflowerblue",
-  "teal",
-  "darkolivegreen",
-  "mediumseagreen",
-  "purple",
-  "plum",
-  "gold",
-  "darkorange",
-  "orangered",
-  "firebrick",
-] as const;
+import { colors } from "utility";
 
 export const ColorSelect: React.FC<{
   selected: typeof colors[number];

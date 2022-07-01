@@ -1,45 +1,36 @@
-import { Refine } from "@pankod/refine-core";
-import { ReadyPage, ErrorComponent } from "@pankod/refine-antd";
 import "@pankod/refine-antd/dist/styles.min.css";
-import routerProvider from "@pankod/refine-react-router-v6";
-import { dataProvider, liveProvider } from "@pankod/refine-supabase";
-import { supabaseClient } from "utility";
-import {
-  Title,
-  Header,
-  Footer,
-  Layout,
-  OffLayoutArea,
-} from "components/layout";
-
 import "styles/index.css";
+import { Refine } from "@pankod/refine-core";
+import routerProvider from "@pankod/refine-react-router-v6";
 
-import { CanvasList } from "pages/canvases/list";
-import { CanvasCreate } from "pages/canvases/create";
-import { CanvasShow } from "pages/canvases/show";
+import { dataProvider, liveProvider } from "utility";
+
+import { Footer, Layout } from "components";
+import { CanvasShow, CanvasList, CanvasCreate } from "pages/canvases";
 
 function App() {
   return (
     <Refine
-      ReadyPage={ReadyPage}
-      catchAll={<ErrorComponent />}
       routerProvider={routerProvider}
       resources={[
         {
           name: "canvases",
+          options: {
+            label: "Refine Pixels",
+          },
           create: CanvasCreate,
           list: CanvasList,
           show: CanvasShow,
         },
+        {
+          name: "pixels",
+        },
       ]}
-      dataProvider={dataProvider(supabaseClient)}
-      liveProvider={liveProvider(supabaseClient)}
-      Title={Title}
-      Header={Header}
-      Sider={() => null}
+      dataProvider={dataProvider}
+      liveProvider={liveProvider}
       Footer={Footer}
+      Sider={() => null}
       Layout={Layout}
-      OffLayoutArea={OffLayoutArea}
     />
   );
 }

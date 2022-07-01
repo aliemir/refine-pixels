@@ -4,21 +4,21 @@ import { Canvas } from "types/canvas";
 import { Pixel } from "types/pixel";
 import { DEFAULT_SCALE, PIXEL_SIZE } from "utility/constants";
 
-export const CanvasItem: React.FC<{
+type Props = {
   canvas: Canvas;
   scale?: number;
   border?: boolean;
   active?: boolean;
   onPixelClick?: (x: number, y: number) => void;
-}> = ({
-  canvas,
+};
+
+export const CanvasItem: React.FC<Props> = ({
+  canvas: { id, name, width, height },
   scale = DEFAULT_SCALE,
   border = true,
   active = true,
   onPixelClick,
 }) => {
-  const { id, name, width, height } = canvas;
-
   const { data } = useList<Pixel>({
     resource: "pixels",
     liveMode: "auto",
@@ -34,7 +34,7 @@ export const CanvasItem: React.FC<{
         {
           field: "canvas_id",
           operator: "eq",
-          value: canvas.id,
+          value: id,
         },
       ],
     },
